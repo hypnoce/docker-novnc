@@ -14,9 +14,11 @@ RUN \
 	pip install --no-cache-dir \
 		numpy \
 	&& \
-	git clone https://github.com/novnc/noVNC.git /usr/src/app/noVNC \
+	git clone --branch v1.1.0-alpha https://github.com/novnc/noVNC.git /usr/src/app/noVNC \
 	&& \
-	git clone https://github.com/kanaka/websockify /usr/src/app/noVNC/utils/websockify \
+	git clone https://github.com/novnc/websockify /usr/src/app/noVNC/utils/websockify \
+	&& \
+	cd /usr/src/app/noVNC/utils/websockify && git checkout f0bdb0a621a4f3fb328d1410adfeaff76f088bfd
 	;
 
 # Run-time

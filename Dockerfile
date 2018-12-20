@@ -19,7 +19,6 @@ RUN \
 	git clone https://github.com/novnc/websockify /usr/src/app/noVNC/utils/websockify \
 	&& \
 	cd /usr/src/app/noVNC/utils/websockify && git checkout f0bdb0a621a4f3fb328d1410adfeaff76f088bfd
-	;
 
 # Run-time
 ENTRYPOINT [ "bash", "/usr/src/app/noVNC/utils/launch.sh" ]

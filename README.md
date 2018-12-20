@@ -7,7 +7,7 @@
 
 ### Pull from Docker Hub
 ```
-docker pull gotget/novnc
+docker pull hypnoce/docker-novnc
 ```
 
 ### Build from GitHub

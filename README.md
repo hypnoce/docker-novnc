@@ -13,7 +13,7 @@ docker pull gotget/novnc
 ### Build from GitHub
 Since there's no external files that are added in, it's easy to build a local image directly from GitHub:
 ```
-docker build --tag gotget/novnc https://raw.githubusercontent.com/gotget/docker-novnc/master/Dockerfile
+docker build --tag hypnoce/docker-novnc https://raw.githubusercontent.com/gotget/docker-novnc/master/Dockerfile
 ```
 
 ## Examples
@@ -26,7 +26,7 @@ docker run \
     --name noVNC \
     --detach \
     --publish 80:6080 \
-    gotget/novnc \
+    hypnoce/docker-novnc \
         --vnc HOST:PORT
 ```
 
@@ -38,7 +38,7 @@ docker run \
     --publish 443:6080 \
     --cert server.pem \
     --ssl-only \
-    gotget/novnc \
+    hypnoce/docker-novnc \
         --vnc HOST:PORT
 ```
 
@@ -60,7 +60,7 @@ vnc_client1:
         - frontend
 
     # VNC Client 1 : Constants
-    image: gotget/novnc
+    image: hypnoce/docker-novnc
     restart: always
     expose:
         - 6080/tcp
